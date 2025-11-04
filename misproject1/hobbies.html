@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF6FB7;
+            --secondary-color: #FFB6E1;
+            --text-color: #FF4DA6;
+            --bg-color: #FFF0F7;
+            --heading-font: 'Source Serif Pro', Georgia, serif;
+            --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background: var(--bg-color);
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 182, 225, 0.8);
+            box-shadow: 0 10px 30px rgba(255, 111, 183, 0.2);
+        }
+
+        h1 {
+            font-family: var(--heading-font);
+            font-size: 2.5rem;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hobby-section {
+            margin-bottom: 3rem;
+        }
+
+        .hobby-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .hobby-title {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 182, 225, 0.3);
+        }
+
+        .hobby-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .hobby-content p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .hobby-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 15px;
+            border: 3px solid rgba(255, 182, 225, 0.8);
+            box-shadow: 0 12px 30px rgba(255, 111, 183, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hobby-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 111, 183, 0.25);
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid rgba(255, 182, 225, 0.8);
+            box-shadow: 0 12px 30px rgba(255, 111, 183, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 111, 183, 0.25);
+        }
+
+        .favorite-locations {
+            background: rgba(255, 182, 225, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .favorite-locations h3 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hobby-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Hobbies</h1>
+
+        <div class="hobby-section">
+            <h2 class="hobby-title">Ice Skating</h2>
+            <div class="hobby-content">
+                <p>I fell in love with hockey when my grandpa and uncle were teaching me to skate. They both played hockey through high school and college, and my grandpa had coached my uncle's team. I look up to them as role models in my life and wanted to experience this sport for myself, so I started playing and never looked back.</p>
+                <img src="IMG_8820.jpeg" alt="Ice skating activity" class="hobby-image">
+                <p>Ice Skating is so important to me because I have met so many people through our shared love for this activity, and it has allowed me to bond with the role models in my life by learning from them and showing them my similar passions.</p>
+            </div>
+        </div>
+
+        <div class="hobby-section">
+            <h2 class="hobby-title">Hiking</h2>
+            <div class="hobby-content">
+                <p>One of my most memorable hikes was at the Elba Fire Tower in the summer of 2025. This hike includes a fire tower at the top of a hill, and in order to get to the top, you must climb over 700 stairs. I started training for this hike a month before I went on it because I knew it would be a challenge. I made the climb on August 9th at sunset. It was our most challenging hike and the most unforgettable one by far.</p>
+                
+                <div class="image-gallery">
+                    <img src="IMG_0640.jpeg" alt="Hiking adventure - scenic view" class="gallery-image">
+                    <img src="IMG_3543.jpeg" alt="Hiking adventure - nature trail" class="gallery-image">
+                </div>
+
+                <div class="favorite-locations">
+                    <h3>Favorite Hiking Locations</h3>
+                    <p>My favorite locations I've visited are:</p>
+                    <ul>
+                        <li>The Elba Fire Tower</li>
+                        <li>The Devils Punchbowl</li>
+                        <li>Whitewater State Park</li>
+                    </ul>
+                </div>
+
+                <p>This activity means the world to me because it allows me to spend time with my favorite people doing an activity everyone loves and getting outside to explore the world and what it has to offer.</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>
