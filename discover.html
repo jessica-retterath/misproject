@@ -1,471 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF6FB7;
+            --secondary-color: #FFB6E1;
+            --text-color: #FF4DA6;
+            --bg-color: #FFF0F7;
+            --heading-font: 'Source Serif Pro', Georgia, serif;
+            --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background: var(--bg-color);
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 182, 225, 0.8);
+            box-shadow: 0 10px 30px rgba(255, 111, 183, 0.2);
+        }
+
+        h1 {
+            font-family: var(--heading-font);
+            font-size: 2.5rem;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 182, 225, 0.3);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+            font-size: 1.05rem;
+            margin: 0 10px;
+        }
+
+        .nav-button:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 111, 183, 0.3);
+        }
+
+        .discover-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 20px;
+            border: 6px solid rgba(255, 182, 225, 0.9);
+            box-shadow: 0 12px 30px rgba(255, 111, 183, 0.18), inset 0 2px 8px rgba(255,255,255,0.6);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .discover-image:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 111, 183, 0.28);
+        }
+
+        .reason-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .reason-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 182, 225, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 111, 183, 0.15);
+        }
+
+        .reason-item h3 {
+            color: var(--primary-color);
+            font-family: var(--heading-font);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reason-item p {
+            margin-bottom: 0;
+            color: #2c3e50;
+        }
+
+        @media (min-width: 768px) {
+            .reason-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discover More</h1>
+
+        <div class="content-section">
+            <h2 class="section-title">Why I Chose UMD</h2>
+            <p>I chose UMD because I have always dreamt of living in Duluth. I am originally from Rochester, MN, which is very flat and visually boring. Whereas Duluth is full of nature, hilly, with many hikes and places to explore. After graduation, I am hoping to be able to stay here and create my life in this beautiful city, so I chose UMD to be able to establish myself here in hopes that it makes staying much easier in the future.</p>
+            <img src="IMG_4097.jpeg" alt="Duluth landscape" class="discover-image">
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Why You Should Come to UMD</h2>
+        </div>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Emoji Matching Game</title>
-  <style>
-    :root{
-      --bg:#f7fafc;
-      --card:#ffffff;
-      --accent:#4f46e5;
-      --muted:#6b7280;
-      --correct:#34d399;
-      --wrong:#f87171;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      margin:0;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(135deg,#fbf8ff 0%, #f0f9ff 100%);
-      color:#111827;
-      padding:24px;
-    }
-
-    .wrap{
-      width:100%;
-      max-width:980px;
-      background:var(--card);
-      border-radius:12px;
-      box-shadow: 0 8px 28px rgba(15,23,42,0.08);
-      padding:20px;
-    }
-
-    header{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:12px;
-    }
-
-    h1{font-size:1.25rem;margin:0}
-    .controls{
-      display:flex;
-      gap:8px;
-      align-items:center;
-    }
-    .stat{
-      font-size:0.95rem;
-      color:var(--muted);
-      background:#fff;
-      padding:6px 10px;
-      border-radius:8px;
-      border:1px solid #eef2ff;
-    }
-    button.btn{
-      background:var(--accent);
-      color:white;
-      border:0;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-      cursor:pointer;
-      box-shadow: 0 4px 12px rgba(79,70,229,0.12);
-    }
-    button.btn:active{transform:translateY(1px)}
-    button.ghost{
-      background:transparent;
-      color:var(--accent);
-      border:1px solid rgba(79,70,229,0.12);
-      padding:6px 10px;
-    }
-
-    main{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-
-    .game-area{
-      flex:1 1 640px;
-    }
-
-    .grid{
-      display:grid;
-      gap:12px;
-      grid-template-columns: repeat(4, minmax(64px, 1fr));
-      justify-items:stretch;
-      align-items:stretch;
-    }
-
-    /* Card */
-    .card{
-      perspective:1000px;
-    }
-    .card-button{
-      width:100%;
-      aspect-ratio: 1 / 1;
-      border-radius:10px;
-      border:1px solid rgba(15,23,42,0.06);
-      background:linear-gradient(180deg,#ffffff,#fbfdff);
-      cursor:pointer;
-      position:relative;
-      transform-style:preserve-3d;
-      transition: transform 300ms ease, box-shadow 120ms ease;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:2.25rem;
-      user-select:none;
-      overflow:hidden;
-    }
-
-    .card-button:focus{
-      outline:none;
-      box-shadow:0 0 0 4px rgba(79,70,229,0.12);
-    }
-
-    .card-button.flipped{
-      transform: rotateY(180deg);
-    }
-    .card-face{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      backface-visibility:hidden;
-      -webkit-backface-visibility:hidden;
-    }
-    .card-back{
-      font-size:1.25rem;
-      color:var(--muted);
-      transform: rotateY(0deg);
-      background: linear-gradient(180deg, rgba(15,23,42,0.02), transparent);
-    }
-    .card-front{
-      transform: rotateY(180deg);
-      font-size:2.5rem;
-      background:linear-gradient(180deg,#fff,#f8fafc);
-    }
-
-    .card.matched .card-button{
-      box-shadow: 0 8px 26px rgba(52,211,153,0.12);
-      border-color: rgba(52,211,153,0.45);
-    }
-
-    .message{
-      padding:12px;
-      border-radius:10px;
-      margin-top:12px;
-      display:none;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      background: linear-gradient(90deg, rgba(16,185,129,0.06), rgba(99,102,241,0.03));
-      border: 1px solid rgba(99,102,241,0.08);
-    }
-
-    .message.show{display:flex}
-
-    .footer{
-      margin-top:12px;
-      color:var(--muted);
-      font-size:0.95rem;
-    }
-
-    /* Responsive */
-    @media (max-width:640px){
-      .grid{grid-template-columns: repeat(4, minmax(56px, 1fr)); gap:10px}
-      .card-button{font-size:1.7rem}
-    }
-
-  </style>
+  <title>Discover — UMD</title>
+  <!-- include site CSS here -->
 </head>
 <body>
-  <div class="wrap" role="application" aria-labelledby="game-title">
-    <header>
-      <div>
-        <h1 id="game-title">Emoji Matching Game</h1>
-        <div style="color:var(--muted);font-size:0.95rem">Find matching emoji pairs — keyboard & screen reader friendly</div>
+  <!-- ... other page content ... -->
+
+  <section id="why-you-should-go-to-umd">
+
+
+    <!-- INSERT THE EMBED SNIPPET HERE (copy the block from above) -->
+    <div class="video-wrapper" aria-labelledby="why-umd-video-heading">
+      <h3 id="why-umd-video-heading" class="sr-only">Why you should go to UMD</h3>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/_uOUlXbsqkk?rel=0"
+          title="Why you should go to UMD"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
       </div>
+      <p class="video-caption">from YouTube Shorts</p>
+    </div>
 
-      <div class="controls" aria-hidden="false">
-        <div class="stat" aria-live="polite">Moves: <span id="moves">0</span></div>
-        <div class="stat" aria-live="polite">Matches: <span id="matches">0</span>/8</div>
-        <div class="stat" aria-live="polite">Time: <span id="time">00:00</span></div>
-        <button id="restart" class="btn" title="Restart game">Restart</button>
-      </div>
-    </header>
+    <!-- other content -->
+  </section>
 
-    <main>
-      <section class="game-area" aria-label="Game board">
-        <div id="grid" class="grid" role="grid" aria-describedby="game-instructions"></div>
-
-        <div id="message" class="message" role="status" aria-live="polite">
-          <div><strong id="message-text"></strong></div>
-          <div>
-            <button id="play-again" class="btn">Play again</button>
-            <button id="close-msg" class="ghost">Close</button>
-          </div>
+  <!-- ... rest of page ... -->
+</body>
+</html>
+        <div class="nav-links">
+            <a href="index.html" class="nav-button">Back to Homepage</a>
         </div>
-
-        <p id="game-instructions" class="footer">
-          Click or press Enter / Space on a card to flip it. Match pairs to win. Good luck!
-        </p>
-
-      </section>
-    </main>
-  </div>
-
-  <script>
-    /*
-      Emoji Matching Game
-      - 8 pairs (16 cards)
-      - shuffle, flip, match logic
-      - moves counter, matches counter, timer
-      - keyboard accessible: Enter/Space to flip, arrow keys to move focus
-    */
-
-    // Emoji set (8 unique)
-    const EMOJIS = ["🐶","🐱","🦊","🐼","🦁","🐵","🐸","🐻"];
-
-    // Game state
-    let cards = [];
-    let firstCard = null;
-    let secondCard = null;
-    let lockBoard = false;
-    let moves = 0;
-    let matches = 0;
-    let timerInterval = null;
-    let startTime = null;
-
-    // Elements
-    const grid = document.getElementById('grid');
-    const movesEl = document.getElementById('moves');
-    const matchesEl = document.getElementById('matches');
-    const timeEl = document.getElementById('time');
-    const restartBtn = document.getElementById('restart');
-    const messageEl = document.getElementById('message');
-    const messageText = document.getElementById('message-text');
-    const playAgainBtn = document.getElementById('play-again');
-    const closeMsgBtn = document.getElementById('close-msg');
-
-    function shuffle(array){
-      for(let i = array.length -1; i>0; i--){
-        const j = Math.floor(Math.random()*(i+1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    function formatTime(ms){
-      if (!ms) return "00:00";
-      const totalSecs = Math.floor(ms/1000);
-      const mins = String(Math.floor(totalSecs/60)).padStart(2,'0');
-      const secs = String(totalSecs%60).padStart(2,'0');
-      return `${mins}:${secs}`;
-    }
-
-    function startTimer(){
-      if (timerInterval) return;
-      startTime = Date.now();
-      timerInterval = setInterval(()=>{
-        timeEl.textContent = formatTime(Date.now() - startTime);
-      }, 250);
-    }
-
-    function stopTimer(){
-      clearInterval(timerInterval);
-      timerInterval = null;
-    }
-
-    function resetState(){
-      firstCard = null;
-      secondCard = null;
-      lockBoard = false;
-    }
-
-    function createCard(emoji, index){
-      const wrapper = document.createElement('div');
-      wrapper.className = 'card';
-      wrapper.setAttribute('role','gridcell');
-
-      const button = document.createElement('button');
-      button.className = 'card-button';
-      button.type = 'button';
-      button.setAttribute('aria-label','Hidden card');
-      button.dataset.emoji = emoji;
-      button.dataset.index = index;
-      button.setAttribute('aria-pressed','false');
-      button.tabIndex = 0;
-
-      // back face (concealed)
-      const back = document.createElement('div');
-      back.className = 'card-face card-back';
-      back.textContent = '❓';
-
-      // front face (emoji)
-      const front = document.createElement('div');
-      front.className = 'card-face card-front';
-      front.textContent = emoji;
-      front.setAttribute('aria-hidden','true');
-
-      button.appendChild(back);
-      button.appendChild(front);
-
-      // Event listeners
-      button.addEventListener('click', onCardActivate);
-      button.addEventListener('keydown', (e)=>{
-        if (e.key === 'Enter' || e.key === ' '){
-          e.preventDefault();
-          button.click();
-        }
-      });
-
-      wrapper.appendChild(button);
-      return wrapper;
-    }
-
-    function buildBoard(){
-      grid.innerHTML = '';
-      // Prepare pairs and shuffle
-      const pairPool = [...EMOJIS, ...EMOJIS]; // duplicated
-      shuffle(pairPool);
-      cards = pairPool.map((emoji, i) => {
-        const node = createCard(emoji, i);
-        return { emoji, node, index:i, matched:false };
-      });
-      // append to grid
-      cards.forEach(c => grid.appendChild(c.node));
-    }
-
-    function onCardActivate(e){
-      const btn = e.currentTarget;
-      if (lockBoard) return;
-      if (btn.classList.contains('flipped') || btn.parentElement.classList.contains('matched')) return;
-
-      // start timer on first move
-      if (moves === 0 && !timerInterval) startTimer();
-
-      // flip
-      btn.classList.add('flipped');
-      btn.setAttribute('aria-pressed','true');
-
-      if (!firstCard){
-        firstCard = btn;
-        return;
-      }
-      if (firstCard === btn) return; // clicked same card twice
-
-      secondCard = btn;
-      lockBoard = true;
-      moves++;
-      movesEl.textContent = moves;
-
-      checkForMatch();
-    }
-
-    function checkForMatch(){
-      const isMatch = firstCard.dataset.emoji === secondCard.dataset.emoji;
-      if (isMatch){
-        // mark matched
-        markMatched(firstCard);
-        markMatched(secondCard);
-        matches++;
-        matchesEl.textContent = matches;
-        resetState();
-        if (matches === EMOJIS.length){
-          winGame();
-        } else {
-          lockBoard = false;
-        }
-      } else {
-        // brief visual wrong feedback then hide
-        firstCard.parentElement.classList.add('wrong');
-        secondCard.parentElement.classList.add('wrong');
-        setTimeout(()=>{
-          firstCard.classList.remove('flipped');
-          secondCard.classList.remove('flipped');
-          firstCard.setAttribute('aria-pressed','false');
-          secondCard.setAttribute('aria-pressed','false');
-          firstCard.parentElement.classList.remove('wrong');
-          secondCard.parentElement.classList.remove('wrong');
-          resetState();
-        }, 700);
-      }
-    }
-
-    function markMatched(button){
-      const cardWrapper = button.parentElement;
-      cardWrapper.classList.add('matched');
-      // keep revealed and disable interactions
-      button.disabled = true;
-    }
-
-    function winGame(){
-      stopTimer();
-      const totalTime = Date.now() - startTime;
-      messageText.textContent = `You won! ${moves} moves — ${formatTime(totalTime)}.`;
-      messageEl.classList.add('show');
-      messageEl.focus?.();
-    }
-
-    function restartGame(){
-      stopTimer();
-      moves = 0;
-      matches = 0;
-      movesEl.textContent = '0';
-      matchesEl.textContent = '0';
-      timeEl.textContent = '00:00';
-      messageEl.classList.remove('show');
-      resetState();
-      buildBoard();
-    }
-
-    // Hook up controls
-    restartBtn.addEventListener('click', restartGame);
-    playAgainBtn.addEventListener('click', ()=>{
-      restartGame();
-      playAgainBtn.blur();
-    });
-    closeMsgBtn.addEventListener('click', ()=>{
-      messageEl.classList.remove('show');
-      closeMsgBtn.blur();
-    });
-
-    // Initialize on load
-    buildBoard();
-
-    // Accessibility: allow keyboard navigation with arrow keys
-    grid.addEventListener('keydown', (e)=>{
-      const focusable = Array.from(grid.querySelectorAll('.card-button'));
-      const idx = focusable.indexOf(document.activeElement);
-      if (idx === -1) return;
-
-      const cols = parseInt(getComputedStyle(grid).gridTemplateColumns.split(' ').length) || 4;
-      let nextIdx = null;
-
-      switch(e.key){
-        case 'ArrowRight':
-          nextIdx = (idx + 1) % focusable.length;
-          break;
-        case 'ArrowLeft':
-          nextIdx = (idx - 1 + focusable.length) % focusable.length;
-          break;
-        case 'ArrowDown':
-          nextIdx = (idx + cols) % focusable.length;
-          break;
-        case 'ArrowUp':
-          nextIdx = (idx - cols + focusable.length) % focusable.length;
-          break;
-      }
-      if (nextIdx !== null){
-        e.preventDefault();
-        focusable[nextIdx].focus();
-      }
-    });
-
-    // Expose restart from global for convenience (optional)
-    window.restartEmojiGame = restartGame;
-  </script>
+    </div>
 </body>
 </html>
